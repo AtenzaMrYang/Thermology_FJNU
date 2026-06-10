@@ -1,0 +1,33 @@
+# LaTeX 编译生成的辅助文件
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.lof
+*.lot
+*.nav
+*.snm
+*.vrb
+*.tdo
+*.xmpdata
+
+# 编译生成的 PDF（可选，按需取消注释）
+# *.pdf
+
+# 编辑器/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统
+.DS_Store
+Thumbs.db

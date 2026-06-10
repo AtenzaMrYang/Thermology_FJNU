@@ -74,7 +74,7 @@
     $$
         \overline{x^2}
         = \int_{-a}^{+a} x^2 f(x) \,\mathrm{d}x
-        = \frac{1}{2a}\int_{-a}^{+a} x^2 \mathrm{d}x
+        = \frac{1}{2a}\int_{-a}^{+a} x^2 \,\mathrm{d}x
         = \frac{1}{2a}\left.\frac{1}{3}x^3\right|_{-a}^{+a}
         = \frac{a^2}{3}
     $$
@@ -107,7 +107,7 @@
     $$
         \overline{x^2}
         = \int_{0}^{2a} x^2 f(x) \,\mathrm{d}x
-        = \frac{1}{2a}\int_{0}^{2a} x^2 \mathrm{d}x
+        = \frac{1}{2a}\int_{0}^{2a} x^2 \,\mathrm{d}x
         = \frac{1}{2a} \left.\frac{x^3}{3}\right|_{0}^{2a}
         = \frac{4a^2}{3}
     $$
@@ -128,14 +128,14 @@
     $$
         \overline{x}
         = \int_{-a}^{+a} x f(x) \,\mathrm{d}x
-        = \int_{-a}^{0} \left(\frac{1}{a^2}x^2 + \frac{1}{a}x\right) \mathrm{d}x +  \int_{0}^{a} \left(-\frac{1}{a^2}x^2 + \frac{1}{a}x\right) \mathrm{d}x
+        = \int_{-a}^{0} \left(\frac{1}{a^2}x^2 + \frac{1}{a}x\right) \,\mathrm{d}x + \int_{0}^{a} \left(-\frac{1}{a^2}x^2 + \frac{1}{a}x\right) \,\mathrm{d}x
         = 0
     $$
     $$
         \overline{x^2}
         = \int_{-a}^{+a} x^2 f(x) \,\mathrm{d}x
-        = 2\int_0^a \left(-\frac{1}{a^2}x^3 + \frac{1}{a}x^2 \right) \mathrm{d}x
-        =  2\left.\left(-\frac{1}{4a^2}x^4 + \frac{1}{3a}x^3 \right)\right|_0^a = \frac{a^2}{6}
+        = 2\int_0^a \left(-\frac{1}{a^2}x^3 + \frac{1}{a}x^2 \right) \,\mathrm{d}x
+        = 2\left.\left(-\frac{1}{4a^2}x^4 + \frac{1}{3a}x^3 \right)\right|_0^a = \frac{a^2}{6}
     $$
 \end{solution}
 
@@ -145,16 +145,16 @@
 \begin{solution}
     麦克斯韦速率分布为
     \begin{equation}
-        \frac{\mathrm{d}N}{N} = f(v) \,\mathrm{d}v = 4\pi\left(\frac{m}{2\pi kT}\right)^{3/2} \cdot \exp\left(-\frac{mv^2}{2kT}\right) \cdot v^2 \, \mathrm{d}v
+        \frac{\mathrm{d}N}{N} = f(v) \,\mathrm{d}v = 4\pi\left(\frac{m}{2\pi kT}\right)^{3/2} \cdot \exp\left(-\frac{mv^2}{2kT}\right) \cdot v^2 \,\mathrm{d}v
     \end{equation}
-    考虑到题目设定的速率区间与 $v_p$ 有关，故考虑用 $v_p = \sqrt{\dfrac{2kT}{m}}$ 改写上式
+    考虑到题目设定的速率区间与 $v_p$ 有关，故考虑用 $v_p = \sqrt{\frac{2kT}{m}}$ 改写上式
     $$
         \frac{\mathrm{d}N}{N} = f(v) \,\mathrm{d}v
         = \frac{4}{\sqrt{\pi}}\left(\frac{1}{v_p^2}\right)^{3/2} \cdot \exp\left(-\frac{v^2}{v_p^2}\right) \cdot v^2 \,\mathrm{d}v
     $$
-    虽然因式 $\exp\left(-\dfrac{v^2}{v_p^2}\right)$ 很难直接处理，但是我们可以考虑用 $u = \dfrac{v}{v_p}$ 换元，进一步得到
+    虽然因式 $\exp\left(-\frac{v^2}{v_p^2}\right)$ 很难直接处理，但是我们可以考虑用 $u = \frac{v}{v_p}$ 换元，进一步得到
     $$
-        \frac{\mathrm{d}N_u}{N} = \frac{4}{\sqrt{\pi}}\left(\frac{1}{v_p^2}\right)^{3/2} \cdot \exp(-u^2) \cdot (uv_p)^2 \,\mathrm{d}(uv_p)  = \frac{4}{\sqrt{\pi}}\cdot\exp(-u^2)\cdot u^2 \,\mathrm{d}u
+        \frac{\mathrm{d}N_u}{N} = \frac{4}{\sqrt{\pi}}\left(\frac{1}{v_p^2}\right)^{3/2} \cdot \exp(-u^2) \cdot (uv_p)^2 \,\mathrm{d}(uv_p) = \frac{4}{\sqrt{\pi}}\cdot \exp(-u^2) \cdot u^2 \,\mathrm{d}u
     $$
     相应地， 速率区间 $v_p \leqslant v \leqslant 1.01v_p$ 也会随着换元而变为 $1 \leqslant u \leqslant 1.01$. 注意到这是一个非常非常窄的区间，所以可以近似认为 $u = 1$， $\mathrm{d}u = 0.01$
     $$
@@ -165,35 +165,35 @@
 \end{solution}
 
 \begin{question}{题目2.3.4}
-    根据麦克斯韦速率分布，求速率倒数的平均值 $\overline{\left(\dfrac{1}{v}\right)}$
+    根据麦克斯韦速率分布，求速率倒数的平均值 $\overline{\left(\frac{1}{v}\right)}$
 \end{question}
 
 \begin{solution}
     $$
         \begin{aligned}
-            \overline{\left(\dfrac{1}{v}\right)}
+            \overline{\left(\frac{1}{v}\right)}
              & = \int_0^{+\infty} \frac{1}{v} \cdot 4\pi \left(\frac{m}{2\pi kT}\right)^{3/2} \cdot \exp\left(-\frac{mv^2}{2kT}\right) \cdot v^2 \,\mathrm{d}v \\
              & = \int_0^{+\infty} \frac{4}{\sqrt{\pi}}\left(\frac{m}{2kT}\right)^{3/2} \cdot \exp\left(-\frac{mv^2}{2kT}\right) \cdot v \,\mathrm{d}v          \\
         \end{aligned}
     $$
-    令 $\alpha = \dfrac{m}{2kT}>0$，$v\mathrm{d}v = \dfrac{1}{2}\mathrm{d}v^2$上式化为
+    令 $\alpha = \frac{m}{2kT}>0$，$v\,\mathrm{d}v = \frac{1}{2}\,\mathrm{d}v^2$ 上式化为
     $$
         \begin{aligned}
-            \overline{\left(\dfrac{1}{v}\right)}
-             & = \int_0^{+\infty} \frac{4}{\sqrt{\pi}} \alpha^{3/2}  \cdot \exp(-\alpha v^2) \, \frac{1}{2}\mathrm{d}v^2                                      \\
+            \overline{\left(\frac{1}{v}\right)}
+             & = \int_0^{+\infty} \frac{4}{\sqrt{\pi}} \alpha^{3/2} \cdot \exp(-\alpha v^2) \, \frac{1}{2}\,\mathrm{d}v^2                                      \\
              & = \frac{2}{\sqrt{\pi}}\alpha^{3/2} \int_0^{+\infty} \exp(-\alpha v^2) \,\mathrm{d}v^2                                                          \\
              & = \frac{2}{\sqrt{\pi}}\alpha^{3/2} \cdot \left.\left[\left(-\frac{1}{\alpha}\right) \cdot \mathrm{e}^{-\alpha v^2}\right]\right|_{0}^{+\infty} \\
              & = -\frac{2}{\sqrt{\pi}}\alpha^{1/2} \cdot (\mathrm{e}^{-\infty}-\mathrm{e}^0)                                                                  \\
              & = \sqrt{\frac{2m}{\pi kT}}
         \end{aligned}
     $$
-    根据平均速率表达式 $\bar{v} = \sqrt{\dfrac{8kT}{\pi m}}$ ，有
+    根据平均速率表达式 $\bar{v} = \sqrt{\frac{8kT}{\pi m}}$ ，有
     $$
-        \overline{\left(\dfrac{1}{v}\right)} = \frac{4}{\pi} \cdot \frac{1}{\bar{v}}
+        \overline{\left(\frac{1}{v}\right)} = \frac{4}{\pi} \cdot \frac{1}{\bar{v}}
     $$
 \end{solution}
 
-\begin{question}{题目2.3.6}试将麦克斯韦速率分布化为按平动动能的分布，并求出最概然动能.它是否等于 $\dfrac{mv_p^2}{2}$？为什么？
+\begin{question}{题目2.3.6}试将麦克斯韦速率分布化为按平动动能的分布，并求出最概然动能.它是否等于 $\frac{mv_p^2}{2}$？为什么？
 \end{question}
 
 \begin{solution}
@@ -203,7 +203,7 @@
     $$
     解出
     $$
-        v = \sqrt{\dfrac{2\varepsilon}{m}}
+        v = \sqrt{\frac{2\varepsilon}{m}}
     $$
     将$f(v) \,\mathrm{d}v$ 改写为 $F(\varepsilon) \,\mathrm{d}\varepsilon$
     $$
@@ -211,7 +211,7 @@
             F(\varepsilon)\,\mathrm{d}\varepsilon
              & = 4\pi\left(\frac{m}{2\pi kT}\right)^{3/2} \cdot \exp\left(-\frac{m}{2kT} \cdot \frac{2\varepsilon}{m}\right) \cdot \frac{2\varepsilon}{m} \,\mathrm{d}\left(\sqrt{\frac{2\varepsilon}{m}}\right)      \\
              & = 4\pi\left(\frac{m}{2\pi kT}\right)^{3/2} \exp\left(-\frac{\varepsilon}{kT}\right) \cdot \frac{2\varepsilon}{m} \cdot \sqrt{\frac{2}{m}} \cdot \frac{1}{2 \sqrt{\varepsilon}} \,\mathrm{d}\varepsilon \\
-             & = 2\pi\left(\frac{1}{kT} \right)^{3/2} \exp\left(-\frac{\varepsilon}{kT}\right) \sqrt{\varepsilon} \,\mathrm{d}\varepsilon                                                                             \\
+             & = 2\pi\left(\frac{1}{kT}\right)^{3/2} \exp\left(-\frac{\varepsilon}{kT}\right) \sqrt{\varepsilon} \,\mathrm{d}\varepsilon                                                                             \\
         \end{aligned}
     $$
     再将 $F(\varepsilon)$ 对 $\varepsilon$ 求导，并令导函数为零
@@ -219,16 +219,16 @@
         \left. \frac{\mathrm{d}F(\varepsilon)}{\mathrm{d}\varepsilon} \right|_{\varepsilon=\varepsilon_p} = 0
     $$
     $$
-        \frac{2}{\sqrt{\pi}}\left(\frac{1}{kT} \right)^{3/2} \left[ -\frac{1}{kT}\exp\left(-\frac{\varepsilon}{kT}\right) \sqrt{\varepsilon} + \exp\left(-\frac{\varepsilon}{kT}\right)\frac{1}{2\sqrt{\varepsilon}} \right] = 0 \\
+        \frac{2}{\sqrt{\pi}}\left(\frac{1}{kT}\right)^{3/2} \left[ -\frac{1}{kT}\exp\left(-\frac{\varepsilon}{kT}\right) \sqrt{\varepsilon} + \exp\left(-\frac{\varepsilon}{kT}\right)\frac{1}{2\sqrt{\varepsilon}} \right] = 0 \\
     $$
     $$
-        \frac{2}{\sqrt{\pi}}\left( \frac{1}{kT} \right)^{3/2} \exp\left(-\frac{\varepsilon}{kT}\right) \left( -\frac{1}{kT}\sqrt{\varepsilon} + \frac{1}{2\sqrt{\varepsilon}} \right) = 0\\
+        \frac{2}{\sqrt{\pi}}\left(\frac{1}{kT}\right)^{3/2} \exp\left(-\frac{\varepsilon}{kT}\right) \left( -\frac{1}{kT}\sqrt{\varepsilon} + \frac{1}{2\sqrt{\varepsilon}} \right) = 0\\
     $$
     前两个因式绝对不为零，当且仅当第三个因式为零时，导函数为零，即
     $$
         -\frac{1}{kT}\sqrt{\varepsilon} + \frac{1}{2\sqrt{\varepsilon}} = 0
     $$
-    此时最概然动能 $v_p$ 为
+    此时最概然动能 $\varepsilon_p$ 为
     $$
         \varepsilon_p = \frac{kT}{2}
     $$
@@ -255,7 +255,7 @@
 \begin{solution}
     麦克斯韦速度分布可以表示为
     \begin{equation}
-        f(v_i) \,\mathrm{d}v_i = \left(\frac{m}{2\pi kT}\right)^{1/2} \cdot \exp\left(- \frac{mv_i^2}{2kT}\right) \mathrm{d}v_i
+        f(v_i) \,\mathrm{d}v_i = \left(\frac{m}{2\pi kT}\right)^{1/2} \cdot \exp\left(- \frac{mv_i^2}{2kT}\right) \,\mathrm{d}v_i
         \quad
         (i = x, y, z)
     \end{equation}
@@ -264,8 +264,8 @@
         \begin{aligned}
             \overline{v_i}
              & = \int_{-\infty}^{+\infty} v_if(v_i) \,\mathrm{d}v_i                                                                    \\
-             & =\int_{-\infty}^{+\infty} \left(\frac{m}{2\pi kT}\right)^{1/2} \exp\left(-\frac{mv_i^2}{2kT}\right) v_i \,\mathrm{d}v_i \\
-             & =\left(\frac{m}{2\pi kT}\right)^{1/2} \int_{-\infty}^{+\infty} \exp\left(-\frac{mv_i^2}{2kT}\right) v_i \,\mathrm{d}v_i \\
+             & = \int_{-\infty}^{+\infty} \left(\frac{m}{2\pi kT}\right)^{1/2} \exp\left(-\frac{mv_i^2}{2kT}\right) v_i \,\mathrm{d}v_i \\
+             & = \left(\frac{m}{2\pi kT}\right)^{1/2} \int_{-\infty}^{+\infty} \exp\left(-\frac{mv_i^2}{2kT}\right) v_i \,\mathrm{d}v_i \\
         \end{aligned}
     \end{equation}
     考虑到奇函数 $\displaystyle \exp\left(-\frac{mv_i^2}{2kT} \right) v_i$ 在对称区间 $(-\infty, +\infty)$ 上的积分为零，所以
@@ -290,7 +290,7 @@
         \label{麦克斯韦速度分布的方均值}
         \overline{v_i^2}
         = \left(\frac{m}{2\pi kT}\right)^{1/2} \cdot 2 \cdot \frac{1}{4} \sqrt{\pi} \left(\frac{m}{2kT}\right)^{-3/2}
-        =\frac{kT}{m}
+        = \frac{kT}{m}
     \end{equation}
     %\end{tcolorbox}
     (1) 根据公式 $\eqref{麦克斯韦速度分布的平均值}$， 当 $i = x$ 时，有
@@ -299,7 +299,7 @@
     $$
     (2) 根据公式 $\eqref{麦克斯韦速度分布的方均值}$，当 $i = x$ 时，有
     $$
-        \overline{v_x^2} =\frac{kT}{m}
+        \overline{v_x^2} = \frac{kT}{m}
     $$
     (3) 由于 $v_x$ 与 $v$ 相互独立，根据公式 $\eqref{麦克斯韦速度分布的平均值}$
     $$
@@ -331,20 +331,20 @@
         \frac{\mathrm{d}N(v_x)}{N}
         = \int_{2v_p}^{+\infty} \left(\frac{m}{2 \pi kT}\right)^{1/2} \cdot \exp\left(-\frac{mv_x^2}{2kT}\right) \,\mathrm{d}v_x
     $$
-    令 $u =  \dfrac{v_x}{v_p}$
+    令 $u = \frac{v_x}{v_p}$
     $$
         \frac{\mathrm{d}N}{N}
         = \left(\frac{m}{2 \pi kT}\right)^{1/2} \int_{2}^{+\infty} \exp(-u^2) \,\mathrm{d}(u \cdot v_p)
         = \frac{1}{\sqrt{\pi}}\int_{2}^{+\infty} \exp(-u^2) \,\mathrm{d}u
     $$
-    我们在此处引入误差函数 $\displaystyle \operatorname{erf}(x) = \dfrac{2}{\sqrt{\pi}}\int_0^x \exp(-x^2) \,\mathrm{d}x$，上式化为
+    我们在此处引入误差函数 $\displaystyle \operatorname{erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x \exp(-x^2) \,\mathrm{d}x$，上式化为
     $$
         \begin{aligned}
             \frac{\mathrm{d}N}{N}
              & = \frac{1}{2} \left[ \frac{2}{\sqrt{\pi}}\int_{2}^{+\infty} \exp(-u^2) \,\mathrm{d}u \right] \\
              & = \frac{1}{2} \left[\frac{2}{\sqrt{\pi}}\int_0^{+\infty}\exp(-u^2) \,\mathrm{d}u
-            - \frac{2}{\sqrt{\pi}}\int_0^2\exp(-u^2) \,\mathrm{d}u  \right]                                 \\
-             & = \frac{1}{2} \left[ 1- \operatorname{erf} (2)\right]                                        \\
+            - \frac{2}{\sqrt{\pi}}\int_0^2\exp(-u^2) \,\mathrm{d}u \right]                                 \\
+             & = \frac{1}{2} \left[ 1 - \operatorname{erf}(2)\right]                                        \\
              & \approx 0.00235
         \end{aligned}
     $$
@@ -372,7 +372,7 @@
     $$
         \begin{dcases}
             \bar{v} = \sqrt{\frac{8kT}{\pi m}} \\
-            p=\frac{1}{3}nm\overline{v^2}      \\
+            p = \frac{1}{3}nm\overline{v^2}      \\
             \Gamma = \frac{1}{4} n \bar{v}
         \end{dcases}
         \implies \Gamma = \frac{p}{\sqrt{2\pi mkT}}
@@ -383,7 +383,7 @@
     $$
     由此可知在 $\mathrm{d}t$ 时间内通过小孔的气体质量为
     $$
-        \mathrm{d}m = m \cdot \Delta\Gamma \cdot A \cdot \mathrm{d}t
+        \mathrm{d}m = m \cdot \Delta\Gamma \cdot A \cdot \,\mathrm{d}t
     $$
     每秒通过小孔的气体质量可以表示为
     $$
@@ -394,7 +394,7 @@
 \begin{question}{题目2.5.8}
     一带有小孔（小孔面积为 $A$ ）的固定隔板把容器分为体积均为 $V$ 的两部分. 开始时，左方装有温度为 $T_0$、压强为 $p_0$ 的单原子分子理想气体，右方为真空. 由于孔很小，因而虽然板两边分子数随时间变化，但仍可假定任一时刻近似是平衡态，又整个容器被温度为$T_0$ 的热源包围. 试求:
     \begin{enumerate}
-        \item[(1)] 在 $t \to t+\mathrm{d}t$ 时间内从左方穿过小孔到达右方的分子；
+        \item[(1)] 在 $t \to t+\,\mathrm{d}t$ 时间内从左方穿过小孔到达右方的分子；
         \item[(2)] 左方压强的具体表达式（它是时间的函数）；
         \item[(3)] 最后达到平衡时气体与热源一共交换了多少热量？
     \end{enumerate}
@@ -405,24 +405,24 @@
     $$
         n_1(t) + n_2(t) = n_0 \left( \text{其中} n_0 = \frac{p_0}{kT} \right)
     $$
-    按照气体分子的碰撞数公式，在 $t \to t+\mathrm{d}t$ 时间内从左侧穿越小孔到达右侧的分子数为
+    按照气体分子的碰撞数公式，在 $t \to t+\,\mathrm{d}t$ 时间内从左侧穿越小孔到达右侧的分子数为
     $$
-        -\mathrm{d}N_1 = \frac{n_1\bar{v}A\mathrm{d}t}{4} - \frac{n_2\bar{v}A\mathrm{d}t}{4}
+        -\,\mathrm{d}N_1 = \frac{n_1\bar{v}A\,\mathrm{d}t}{4} - \frac{n_2\bar{v}A\,\mathrm{d}t}{4}
     $$
     (2)联立以上两式，可得
     $$
-        \mathrm{d}n_1 = -\frac{A\bar{v}}{4V} \cdot \left(2n_1 - n_0\right) \mathrm{d}t
+        \mathrm{d}n_1 = -\frac{A\bar{v}}{4V} \cdot \left(2n_1 - n_0\right) \,\mathrm{d}t
     $$
     两边同除以 $V$ 得到左右两侧的压强关系，其中 $p_1$ 是关于时间 $t$ 的函数
     $$
-        \mathrm{d} p_1  = -\frac{A\bar{v}}{4V} \cdot (2p_1 - p_0) \mathrm{d}t
+        \mathrm{d} p_1 = -\frac{A\bar{v}}{4V} \cdot (2p_1 - p_0) \,\mathrm{d}t
     $$
     分离变量并积分
     $$
         \begin{aligned}
-            \mathrm{d}p_1                                          & = -\frac{A\bar{v}}{4V} \cdot (2p_1 - p_0) \mathrm{d}t \\
-            \frac{\mathrm{d}p_1}{2p_1 - p_0}                       & =  -\frac{A\bar{v}}{4V} \mathrm{d}t                   \\
-            \int_{p_0}^{p_1} \frac{\mathrm{d}p_1}{2p_1 - p_0}      & = \int_0^t -\frac{A\bar{v}}{4V} \mathrm{d}t           \\
+            \mathrm{d}p_1                                          & = -\frac{A\bar{v}}{4V} \cdot (2p_1 - p_0) \,\mathrm{d}t \\
+            \frac{\mathrm{d}p_1}{2p_1 - p_0}                       & = -\frac{A\bar{v}}{4V} \,\mathrm{d}t                   \\
+            \int_{p_0}^{p_1} \frac{\mathrm{d}p_1}{2p_1 - p_0}      & = \int_0^t -\frac{A\bar{v}}{4V} \,\mathrm{d}t           \\
             \left. \frac{1}{2} \ln(2p_1 - p_0) \right|_{p_0}^{p_1} & = \left. -\frac{A\bar{v}}{4V} t \right|_0^t           \\
             \ln(2p_1 - p_0)                                        & = -\frac{A\bar{v}}{2V} t + \ln{p_0}                   \\
         \end{aligned}
@@ -435,16 +435,16 @@
 \end{solution}
 
 \begin{question}{题目2.7.1}
-    求常温下质量 $m_1=3.00 \,\si{g}$ 的水蒸气与 $m_2 = 3.00 \,\si{g}$ 的氢气组成的混合理想气体的摩尔定容热容.
+    求常温下质量 $m_1 = 3.00 \,\si{g}$ 的水蒸气与 $m_2 = 3.00 \,\si{g}$ 的氢气组成的混合理想气体的摩尔定容热容.
 \end{question}
 
 \begin{solution}
-    考虑到$m_1=3.00 \,\si{g}$ 的水蒸气的物质的量为 $\dfrac{1}{6} \,\si{mol}$，有$6$个自由度；$m_2 = 3.00 \,\si{g}$ 的氢气的物质的量为 $\dfrac{3}{2} \,\si{mol}$，有$5$个自由度，所以气体的内能可以表示为
+    考虑到$m_1 = 3.00 \,\si{g}$ 的水蒸气的物质的量为 $\frac{1}{6} \,\si{mol}$，有$6$个自由度；$m_2 = 3.00 \,\si{g}$ 的氢气的物质的量为 $\frac{3}{2} \,\si{mol}$，有$5$个自由度，所以气体的内能可以表示为
     $$
         U = \frac{1}{6} \cdot \frac{6}{2}RT + \frac{3}{2} \cdot \frac{5}{2}RT
         = \frac{17}{4}RT
     $$
-    所以 $1 \,\si{mol}$ 此种理想气体所具有的内能 $U_\mathrm{m}$可以表示为
+    所以 $1 \,\si{mol}$ 此种理想气体所具有的内能 $U_\mathrm{m}$ 可以表示为
     $$
         U_\mathrm{m} = \frac{U}{\frac{1}{6} + \frac{3}{2}} = \frac{51}{20}RT
     $$
@@ -466,7 +466,7 @@
 
 \begin{solution}
     \begin{itemize}
-        \item[(1)] 这种气体分子有 $3$ 个平动自由度，$3$个转动自由度，振动自由度数最多可以有 $6$ 个；
+        \item[(1)] 这种气体分子有 $3$ 个平动自由度，$3$ 个转动自由度，振动自由度数最多可以有 $6$ 个；
         \item[(2)] 如果为刚性分子，其振动自由度全部被冻结，这时有 $3$ 个平动自由度和 $3$ 个转动自由度。按照能量均分定理，摩尔定容热容为 $C_{V,\mathrm{m}} = 6 \cdot \frac{R}{2} = 3R$.
     \end{itemize}
 \end{solution}

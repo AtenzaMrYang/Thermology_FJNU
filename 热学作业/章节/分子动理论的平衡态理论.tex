@@ -211,7 +211,7 @@
             F(\varepsilon)\,\mathrm{d}\varepsilon
              & = 4\pi\left(\frac{m}{2\pi kT}\right)^{3/2} \cdot \exp\left(-\frac{m}{2kT} \cdot \frac{2\varepsilon}{m}\right) \cdot \frac{2\varepsilon}{m} \,\mathrm{d}\left(\sqrt{\frac{2\varepsilon}{m}}\right)      \\
              & = 4\pi\left(\frac{m}{2\pi kT}\right)^{3/2} \exp\left(-\frac{\varepsilon}{kT}\right) \cdot \frac{2\varepsilon}{m} \cdot \sqrt{\frac{2}{m}} \cdot \frac{1}{2 \sqrt{\varepsilon}} \,\mathrm{d}\varepsilon \\
-             & = 2\pi\left(\frac{1}{kT}\right)^{3/2} \exp\left(-\frac{\varepsilon}{kT}\right) \sqrt{\varepsilon} \,\mathrm{d}\varepsilon                                                                             \\
+             & = \frac{\pi}{2}\left(\frac{1}{kT}\right)^{3/2} \exp\left(-\frac{\varepsilon}{kT}\right) \sqrt{\varepsilon} \,\mathrm{d}\varepsilon                                                                             \\
         \end{aligned}
     $$
     再将 $F(\varepsilon)$ 对 $\varepsilon$ 求导，并令导函数为零
@@ -292,7 +292,6 @@
         = \left(\frac{m}{2\pi kT}\right)^{1/2} \cdot 2 \cdot \frac{1}{4} \sqrt{\pi} \left(\frac{m}{2kT}\right)^{-3/2}
         = \frac{kT}{m}
     \end{equation}
-    %\end{tcolorbox}
     (1) 根据公式 $\eqref{麦克斯韦速度分布的平均值}$， 当 $i = x$ 时，有
     $$
         \overline{v_x} = 0
@@ -337,7 +336,7 @@
         = \left(\frac{m}{2 \pi kT}\right)^{1/2} \int_{2}^{+\infty} \exp(-u^2) \,\mathrm{d}(u \cdot v_p)
         = \frac{1}{\sqrt{\pi}}\int_{2}^{+\infty} \exp(-u^2) \,\mathrm{d}u
     $$
-    我们在此处引入误差函数 $\displaystyle \operatorname{erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x \exp(-x^2) \,\mathrm{d}x$，上式化为
+    我们在此处引入误差函数 $\displaystyle \operatorname{erf}(x) = \frac{2}{\sqrt{\pi}}\int_0^x \exp(-t^2) \,\mathrm{d}t$，上式化为
     $$
         \begin{aligned}
             \frac{\mathrm{d}N}{N}
@@ -429,7 +428,7 @@
     $$
     把等式两边同时作为 $\mathrm{e}$ 的指数，并化简得
     $$
-        p_1(t) = \frac{p_0}{2} \cdot \left[1+\exp\left(-\frac{A\bar{v}}{4V}t\right) \right]
+        p_1(t) = \frac{p_0}{2} \cdot \left[1+\exp\left(-\frac{A\bar{v}}{2V}t\right) \right]
     $$
     (3)由于两边的容器温度始终为 $T_0$， 且系统和外面的温度始终相等，所以最后达到平衡的过程中气体与热源之间没有热量交换.
 \end{solution}
